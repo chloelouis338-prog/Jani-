@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Abeeha 🎂</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  min-height:100vh;
+  overflow-x:hidden;
+  font-family:"Segoe UI",sans-serif;
+  background:linear-gradient(135deg,#ffe6f2,#eadcff,#dff7ff);
+  color:#5a3150;
+  text-align:center;
+}
+
+.container{
+  min-height:100vh;
+  padding:35px 18px 50px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  overflow:hidden;
+}
+
+h1{
+  font-size:42px;
+  color:#d63384;
+  text-shadow:0 3px 12px #ffffff;
+  animation:pop 1.5s ease infinite alternate;
+}
+
+.subtitle{
+  font-size:21px;
+  margin-top:8px;
+  color:#754c68;
+}
+
+.name{
+  font-size:34px;
+  font-weight:bold;
+  color:#b52b78;
+  margin-top:10px;
+}
+
+/* Cute girl */
+.girl{
+  width:170px;
+  height:205px;
+  position:relative;
+  margin:25px auto 10px;
+  animation:float 3s ease-in-out infinite;
+}
+
+.hair{
+  position:absolute;
+  width:125px;
+  height:145px;
+  background:#4b2c38;
+  border-radius:65px 65px 45px 45px;
+  left:23px;
+  top:10px;
+}
+
+.face{
+  position:absolute;
+  width:92px;
+  height:105px;
+  background:#ffd7c2;
+  border-radius:48% 48% 45% 45%;
+  left:39px;
+  top:32px;
+  z-index:2;
+}
+
+.fringe{
+  position:absolute;
+  width:95px;
+  height:43px;
+  background:#4b2c38;
+  border-radius:50% 50% 30% 30%;
+  left:38px;
+  top:23px;
+  z-index:3;
+}
+
+.eye{
+  position:absolute;
+  width:8px;
+  height:11px;
+  background:#38202c;
+  border-radius:50%;
+  top:77px;
+  z-index:4;
+}
+
+.eye.left{left:61px}
+.eye.right{left:101px}
+
+.smile{
+  position:absolute;
+  width:28px;
+  height:14px;
+  border-bottom:3px solid #c45a76;
+  border-radius:50%;
+  left:71px;
+  top:103px;
+  z-index:4;
+}
+
+.body{
+  position:absolute;
+  width:105px;
+  height:85px;
+  background:#ff77a8;
+  border-radius:50px 50px 15px 15px;
+  left:33px;
+  top:135px;
+  z-index:1;
+}
+
+.arm{
+  position:absolute;
+  width:25px;
+  height:75px;
+  background:#ffd7c2;
+  border-radius:20px;
+  top:145px;
+  z-index:0;
+}
+
+.arm.left{left:19px;transform:rotate(25deg)}
+.arm.right{right:19px;transform:rotate(-25deg)}
+
+/* Cake */
+.cake{
+  position:relative;
+  width:150px;
+  height:90px;
+  margin:20px auto;
+}
+
+.layer{
+  position:absolute;
+  left:15px;
+  width:120px;
+  height:38px;
+  background:#ff91b7;
+  border-radius:10px;
+}
+
+.layer.one{bottom:0}
+.layer.two{
+  bottom:30px;
+  width:105px;
+  left:22px;
+  background:#ffb5ce;
+}
+
+.candle{
+  position:absolute;
+  width:10px;
+  height:30px;
+  background:#fff;
+  left:70px;
+  top:0;
+}
+
+.flame{
+  position:absolute;
+  width:15px;
+  height:20px;
+  background:#ffb300;
+  border-radius:50% 50% 50% 0;
+  transform:rotate(-45deg);
+  left:67px;
+  top:-18px;
+  animation:flicker .5s infinite alternate;
+}
+
+/* Message */
+.card{
+  max-width:650px;
+  background:rgba(255,255,255,.72);
+  padding:25px;
+  border-radius:25px;
+  box-shadow:0 12px 35px rgba(120,60,100,.18);
+  backdrop-filter:blur(8px);
+  margin-top:15px;
+}
+
+.card p{
+  font-size:18px;
+  line-height:1.8;
+}
+
+button{
+  border:0;
+  padding:13px 27px;
+  margin-top:20px;
+  border-radius:30px;
+  background:#d63384;
+  color:white;
+  font-size:17px;
+  cursor:pointer;
+  box-shadow:0 7px 18px rgba(214,51,132,.3);
+}
+
+button:active{
+  transform:scale(.95);
+}
+
+/* Floating hearts */
+.heart{
+  position:absolute;
+  font-size:25px;
+  animation:rise 7s linear infinite;
+  opacity:.75;
+}
+
+.h1{left:10%;animation-delay:0s}
+.h2{left:30%;animation-delay:2s}
+.h3{left:55%;animation-delay:4s}
+.h4{left:80%;animation-delay:1s}
+
+@keyframes float{
+  50%{transform:translateY(-12px)}
+}
+
+@keyframes pop{
+  from{transform:scale(1)}
+  to{transform:scale(1.04)}
+}
+
+@keyframes flicker{
+  to{transform:rotate(-45deg) scale(1.2)}
+}
+
+@keyframes rise{
+  from{bottom:-50px;transform:rotate(0)}
+  to{bottom:110%;transform:rotate(360deg)}
+}
+
+@media(max-width:500px){
+  h1{font-size:32px}
+  .name{font-size:28px}
+  .subtitle{font-size:17px}
+  .card p{font-size:16px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="heart h1">💗</div>
+  <div class="heart h2">💕</div>
+  <div class="heart h3">💖</div>
+  <div class="heart h4">💗</div>
+
+  <h1>🎉 Happy Birthday 🎉</h1>
+  <div class="subtitle">A very special day for a very special girl</div>
+
+  <div class="name">Abeeha Hussain 💕</div>
+  <div class="subtitle">My Sweet Bea 🌸</div>
+
+  <div class="girl">
+    <div class="hair"></div>
+    <div class="face"></div>
+    <div class="fringe"></div>
+    <div class="eye left"></div>
+    <div class="eye right"></div>
+    <div class="smile"></div>
+    <div class="body"></div>
+    <div class="arm left"></div>
+    <div class="arm right"></div>
+  </div>
+
+  <div class="cake">
+    <div class="flame"></div>
+    <div class="candle"></div>
+    <div class="layer two"></div>
+    <div class="layer one"></div>
+  </div>
+
+  <div class="card">
+    <p>
+      💕 Dear Abeeha 💕
+      <br><br>
+      May your birthday be filled with happiness,
+      beautiful moments, endless smiles and lots of love. 🌸
+      <br>
+      May every dream in your heart come true
+      and every new day bring something beautiful into your life.
+      <br><br>
+      Stay happy, keep smiling and always take care of yourself. ❤️
+      <br><br>
+      🎂 Happy Birthday Bea! 🎂
+    </p>
+
+    <button onclick="celebrate()">🎉 Make a Wish 🎉</button>
+  </div>
+
+</div>
+
+<script>
+function celebrate(){
+  for(let i=0;i<80;i++){
+    let x=document.createElement("div");
+    x.innerHTML=["💖","💕","✨","🎉","🌸","💗"][Math.floor(Math.random()*6)];
+
+    x.style.position="fixed";
+    x.style.left=Math.random()*100+"vw";
+    x.style.top="-30px";
+    x.style.fontSize=(15+Math.random()*25)+"px";
+    x.style.zIndex="9999";
+    x.style.transition="transform 3s linear, opacity 3s";
+
+    document.body.appendChild(x);
+
+    setTimeout(()=>{
+      x.style.transform=
+        "translateY("+(window.innerHeight+100)+"px) rotate(720deg)";
+      x.style.opacity="0";
+    },50);
+
+    setTimeout(()=>x.remove(),3200);
+  }
+}
+</script>
+
+</body>
+</html>
